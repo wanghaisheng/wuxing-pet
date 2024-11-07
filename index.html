@@ -7,39 +7,45 @@
   <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
-  <div class="app-container">
-    <h1>Meow</h1>
-    
-    <div class="pet">
-      <img id="pet-image" class="pet-image" src="" alt="Pet Image">
-    </div>
+  <main class="app-container">
+    <header>
+      <h1>Meow</h1>
+    </header>
 
-    <div class="stats">
+    <section class="pet">
+      <img id="pet-image" class="pet-image" src="" alt="Pet Image">
+    </section>
+
+    <section class="stats">
       <div class="stat">
-        <label>Health:</label>
+        <label for="health-bar">Health:</label>
         <progress id="health-bar" value="100" max="100"></progress>
       </div>
       <div class="stat">
-        <label>Hunger:</label>
+        <label for="hunger-bar">Hunger:</label>
         <progress id="hunger-bar" value="100" max="100"></progress>
       </div>
       <div class="stat">
-        <label>Happiness:</label>
+        <label for="happiness-bar">Happiness:</label>
         <progress id="happiness-bar" value="100" max="100"></progress>
       </div>
       <div class="stat">
-        <label>Energy:</label>
+        <label for="energy-bar">Energy:</label>
         <progress id="energy-bar" value="100" max="100"></progress>
       </div>
-    </div>
+    </section>
 
-    <div class="actions">
+    <section class="actions">
       <button id="feed-btn">Feed</button>
       <button id="play-btn">Play</button>
       <button id="sleep-btn">Sleep</button>
       <button id="love-btn">Love</button>
-    </div>
-  </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Created by <a href="https://github.com/therelyona" target="_blank">therelyona</a></p>
+  </footer>
 
   <script src="./src/index.js"></script>
 </body>
