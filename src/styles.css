@@ -88,13 +88,14 @@ progress::-moz-progress-bar {
 }
 
 .footer {
-  position: absolute;
-  bottom: 10px;
+  position: fixed;
+  bottom: 0px;
   left: 0;
   width: 100%;
   text-align: center;
   font-size: 14px;
   color: #ff69b4;
+  padding: 10px 0;
 }
 
 .footer a {
