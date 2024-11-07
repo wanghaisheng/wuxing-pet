@@ -8,6 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   margin: 0;
   background: linear-gradient(to right, #ffcccb, #ffb6c1);
   position: relative;
@@ -30,8 +32,12 @@ h1 {
 }
 
 .pet {
-  font-size: 120px;
   margin-bottom: 20px;
+}
+
+.pet-image {
+  width: 180px;
+  height: auto;
 }
 
 .pet-image {
@@ -86,10 +92,10 @@ progress::-moz-progress-bar {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(3deg);
+    transform: rotate(2deg);
   }
   75% {
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
   }
 }
 
@@ -138,8 +144,9 @@ progress::-moz-progress-bar {
     font-size: 24px;
   }
 
-  .pet {
-    font-size: 80px;
+  .pet-image {
+    width: 150px;
+    height: auto;
   }
 
   .actions button {
@@ -169,8 +176,9 @@ progress::-moz-progress-bar {
     font-size: 20px;
   }
 
-  .pet {
-    font-size: 80px;
+  .pet-image {
+    width: 130px;
+    height: auto;
   }
 
   .actions button {
