@@ -15,11 +15,36 @@ const playBtn = document.getElementById('play-btn');
 const sleepBtn = document.getElementById('sleep-btn');
 const loveBtn = document.getElementById('love-btn');
 
+const updatePetImage = (statePet) => {
+  switch (statePet) {
+    case 'normal':
+      petImage.src = './images/normal.png';
+      break;
+    case 'sad':
+      petImage.src = './images/sad.png';
+      break;
+    case 'food':
+      petImage.src = './images/food.png';
+      break;
+    case 'play':
+      petImage.src = './images/play.png';
+      break;
+    case 'sleep':
+      petImage.src = './images/sleep.png';
+      break;
+    case 'love':
+      petImage.src = './images/love.png';
+      break;
+    default:
+      petImage.src = './images/normal.png';
+  }
+};
+
 const checkMood = () => {
   if (state.health < 20 || state.hunger < 20 || state.happiness < 20 || state.energy < 20) {
-    petImage.textContent = '😿';
+    updatePetImage('sad');
   } else {
-    petImage.textContent = '🐱';
+    updatePetImage('normal');
   }
 };
 
@@ -59,10 +84,10 @@ const feedPet = () => {
     state.hunger = Math.min(100, state.hunger + 20);
     state.health = Math.min(100, state.health + 5);
 
-    petImage.textContent = '🍣';
+    updatePetImage('food');
 
     setTimeout(() => {
-      petImage.textContent = '🐱';
+      updatePetImage('normal');
       updateStats();
     }, 1000);
   }
@@ -74,10 +99,10 @@ const playPet = () => {
     state.energy = Math.max(0, state.energy - 5);
     state.health = Math.min(100, state.health + 5);
 
-    petImage.textContent = '🧶';
+    updatePetImage('play');
 
     setTimeout(() => {
-      petImage.textContent = '🐱';
+      updatePetImage('normal');
       updateStats();
     }, 1000);
   }
@@ -88,10 +113,10 @@ const petToSleep = () => {
     state.energy = Math.min(100, state.energy + 20);
     state.health = Math.min(100, state.health + 5);
 
-    petImage.textContent = '🛏️';
+    updatePetImage('sleep');
 
     setTimeout(() => {
-      petImage.textContent = '🐱';
+      updatePetImage('normal');
       updateStats();
     }, 1000);
   }
@@ -102,16 +127,12 @@ const lovePet = () => {
     state.happiness = Math.min(100, state.happiness + 15);
     state.health = Math.min(100, state.health + 5);
 
-    petImage.textContent = '💖';
+    updatePetImage('love');
 
     setTimeout(() => {
-      petImage.textContent = '😻';
-    }, 1000);
-
-    setTimeout(() => {
-      petImage.textContent = '🐱';
+      updatePetImage('normal');
       updateStats();
-    }, 2000);
+    }, 1000);
   }
 };
 
