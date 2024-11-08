@@ -62,16 +62,8 @@ const degradeStats = () => {
   state.happiness = Math.max(0, state.happiness - 3);
   state.energy = Math.max(0, state.energy - 2);
 
-  if (state.energy === 20) {
-    state.health = Math.max(0, state.health - 30);
-  }
-
-  if (state.hunger === 20) {
-    state.health = Math.max(0, state.health - 30);
-  }
-
-  if (state.happiness === 20) {
-    state.health = Math.max(0, state.health - 30);
+  if (state.hunger <= 20 || state.happiness <= 20 || state.energy <= 20) {
+    state.health = Math.max(0, state.health - 5);
   }
 
   updateStats();
