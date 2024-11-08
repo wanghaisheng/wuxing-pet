@@ -103,11 +103,6 @@ progress::-moz-progress-bar {
   text-decoration: none;
 }
 
-.footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(0deg);
@@ -147,12 +142,22 @@ progress::-moz-progress-bar {
     transform: scale(1.1);
     background-color: #ff1493;
   }
+
+  .footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 @media (hover: none) {
   .actions button:active {
     transform: scale(1.1);
     background-color: #ff1493;
+  }
+
+  .footer a:active {
+    color: white;
+    text-decoration: underline;
   }
 }
 
@@ -193,18 +198,34 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 480px) {
+  .app-container {
+    padding: 15px;
+  }
+
   h1 {
     font-size: 20px;
   }
 
+  .pet {
+    margin-bottom: 10px;
+  }
+
   .pet-image {
-    width: 130px;
+    width: 120px;
     height: auto;
   }
+
+  .stat {
+    margin: 5px 0;
+}
 
   .actions button {
     width: 100%;
     margin: 5px 0;
+  }
+
+  .footer {
+    padding: 0;
   }
 
   .footer p {
