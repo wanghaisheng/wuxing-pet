@@ -1,4 +1,4 @@
-## Meow - your cute virtual pet🐱
+## wuxing pet - your cute virtual pet🐱
 
 **Meow** is a cozy and delightful virtual game where you take care of your very own cute kitten! Feed, play, and show love to keep your pet happy, healthy, and full of energy🌸
 
